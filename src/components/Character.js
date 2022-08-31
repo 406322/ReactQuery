@@ -11,13 +11,10 @@ export const Character = ({ character }) => {
             <div
                 className="m-2"
             >
-                <h1
-                    className="text-xl text-white font-bold">
+                <h1 className="text-xl text-white font-bold">
                     {character.name}
                 </h1>
-                <p
-                    className="font-bold text-white text-xs mb-1"
-                >
+                <p className="font-bold text-white text-xs mb-1">
                     {character.status} - {character.species}
                 </p>
                 <p className="text-white text-xs">Last seen on</p>
@@ -25,7 +22,6 @@ export const Character = ({ character }) => {
                     className="font-bold text-white text-xs"
                 >{character.location.name}</p>
             </div>
-
         </div>
     )
 }

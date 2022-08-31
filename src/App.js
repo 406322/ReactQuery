@@ -1,5 +1,5 @@
 import { QueryClientProvider, QueryClient } from "react-query"
-import Header from "./components/Header"
+import { Header } from "./components/Header"
 import { Characters } from "./components/Characters"
 
 const queryClient = new QueryClient
