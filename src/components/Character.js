@@ -1,5 +1,4 @@
-
-const Character = ({ character }) => {
+export const Character = ({ character }) => {
     return (
         <div
             className="flex w-1/3 m-1 border border-black rounded-md bg-slate-600 overflow-hidden"
@@ -30,5 +29,3 @@ const Character = ({ character }) => {
         </div>
     )
 }
-
-export default Character

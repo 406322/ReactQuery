@@ -1,5 +1,7 @@
 import { useQuery } from "react-query";
-import Character from "./Character";
+import { Character } from "./Character";
+import { Loading } from "./Loading";
+import { Error } from "./Error";
 import { useState } from "react";
 
 export const Characters = () => {
@@ -11,12 +13,12 @@ export const Characters = () => {
         return response.json()
     }
 
-    const { data, status } = useQuery(['characters', page], fetchCharacters, {
+    const { data, status, isPreviousData, isLoading, isError } = useQuery(['characters', page], fetchCharacters, {
         keepPreviousData: true
     })
 
-    if (status === 'loading') { return <div>Loading...</div> }
-    if (status === 'error') { return <div>Error</div> }
+    if (isLoading) { return <Loading /> }
+    if (isError) { return <Error /> }
 
     return (
         <>
@@ -35,7 +37,7 @@ export const Characters = () => {
                 <button
                     className="bg-gray-300 rounded-sm p-1 w-20"
                     onClick={() => { setPage((previous) => previous + 1) }}
-                    disabled={!data.info.next}
+                    disabled={isPreviousData || !data.info.next}
                 >
                     Next
                 </button>
