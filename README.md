@@ -5,6 +5,8 @@
 [![Tailwind][Tailwind]][Tailwind-url]
 [![React-Query][React-Query]][React-Query-url]
 
+<a href="https://query-bice.vercel.app/">Demo</a>
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
